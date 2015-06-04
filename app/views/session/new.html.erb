@@ -1,0 +1,14 @@
+<h1>Sessions</h1>
+<p>Please log in with your user name and password!</p>
+
+<div>
+<%= form_tag '/login' do %>
+  <p><%= "Name" %></p>
+  <p><%= text_field_tag :name, nil, :autofocus => true %></p>
+  <p><%= "Password" %></p>
+  <p><%= password_field_tag :password %></p>
+  <p><%= submit_tag "Login" %></p>
+  <% end %>
+</div>
+
+

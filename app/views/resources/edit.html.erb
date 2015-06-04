@@ -1,0 +1,15 @@
+<h1>Resources#edit</h1>
+<p>Find me in app/views/resources/edit.html.erb</p>
+
+<div>
+<%= form_for @resource do |f| %>
+
+  <%= f.text_field :name %>
+  <%= f.text_field :description %>
+  <%= f.text_field :url %>
+  <%= f.text_field :content %>
+  <%= f.text_field :subject_id %>
+  <%= f.submit "Edit" %>
+  
+<% end %>
+</div>

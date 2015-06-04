@@ -1,0 +1,20 @@
+<h1>User Resources</h1>
+<p>Want to upload a new resource? Please ensure you log in with a user name and password!</p>
+
+<div class="title">
+<% if @current_user %>
+<%= form_for @resource do |f| %>
+    <p><%= "Name" %></p>
+    <p><%= f.text_field :name %></p>
+    <p><%= "Description" %></p>
+    <p><%= f.text_field :description %></p>
+    <p><%= "URL" %></p>
+    <p><%= f.text_field :url %></p>
+    <p><%= "Content" %></p>
+    <p><%= f.text_field :content %></p>
+    <p><%= f.submit "Create" %></p>
+<% else print "Sorry, you must have an account before you can sign up" link_to "Create Account" new_user_path %>
+
+<% end %>
+
+</div>

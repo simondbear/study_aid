@@ -1,0 +1,17 @@
+<h1>User Exercises</h1>
+<p>Want to upload a new resource? Please ensure you log in with a user name and password!</p>
+
+
+<div class="title">
+  <%= form_for @exercise do |f| %>
+  <p><%= "Name" %></p>
+  <p><%= f.text_field :name %></p>
+  <p><%= "Discription" %></p>
+  <p><%= f.text_field :description %></p>
+  <p><%= "Difficulty" %>
+  <p><%= f.number_field :difficulty %></p>
+  <p><%= "Subject" %>
+  <p><%= f.text_field :subject %></p>
+  <p><%= f.submit "Create" %></p>
+<% end %>
+</div>

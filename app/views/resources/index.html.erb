@@ -1,0 +1,29 @@
+<h1><%= @subject.try(:name) %> Resources</h1>
+<p>Below is an exciting list of Resources for you to use!</p>
+
+
+<% @resources.each do |resource| %>
+  
+  <p>
+    <a href="/resources/<%= resource.id %>"><%= resource.name %></a>
+  </p>
+
+
+<% end %>
+
+<div class="bottom">
+<%= link_to "Create Resource", new_resource_path %>
+</div>
+
+<div class="search_bar">
+
+  <p> Cant find what you're looking for? Try our fun search bar! </p>
+  <p>
+    <%= form_tag search_path, :method => 'get' do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+    <% end %>
+  </p>
+
+</div>
+

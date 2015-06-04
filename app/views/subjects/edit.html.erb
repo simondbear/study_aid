@@ -1,0 +1,12 @@
+<h1>Edit Subject</h1>
+<p>Fill out the form below to edit your subject!</p>
+
+<div>
+<%= form_for @subject do |f| %>
+  <p><%= "Name" %></p>
+  <p><%= f.text_field :name %></p>
+  <p><%= "Image URL" %></p>
+  <p><%= f.text_field :image_url%></p>
+  <p><%= f.submit "Edit" %></P>
+<% end %>
+</div>

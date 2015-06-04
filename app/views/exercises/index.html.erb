@@ -1,0 +1,23 @@
+<h1>Exercises</h1>
+<p>Below is a list of exciting exercises that users have uploaded!</p>
+
+
+<% @exercises.each do |exercise| %>
+ 
+
+  <p>
+    <a href="/exercises/<%= exercise.id %>"><%= exercise.name %></a>
+  </p>
+
+
+<% end %>
+
+<div class="bottom">
+  <p><%= link_to "Create Exercise", new_exercise_path %></p>
+  <% if session[:user_id].present? %>
+    <p>"You are currently logged in as <%= @current_user.name %>"</p>
+  <% else %>
+    <p><%= link_to "Create An Account", new_user_path %></p>
+    <p><%= link_to "Already have an Account? Click here", login_path %></p>
+  <% end %>
+</div>

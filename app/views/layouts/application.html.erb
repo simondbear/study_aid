@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>StudyAid</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="home">
+
+  <nav>
+      <img src="/assets/schoolscool_reversed.png" id="logo" >
+       
+    <ul class="nav display"> 
+      <li class="<%= "selected" if @current_screen === "subjects" %>"><%= link_to "Subjects", subjects_path %></li>
+      <li class="<%= "selected" if @current_screen === "resources" %>"><%= link_to "Resources", resources_path %></li>
+      <li class="<%= "selected" if @current_screen === "exercises" %>"><%= link_to "Exercises", exercises_path %></li>
+
+    </ul>
+  </nav>
+
+<div class="container">
+  <%= yield %>
+</div>
+
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = 'studyaid';
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+
+</body>
+
+</html>
+
+
+

@@ -1,0 +1,29 @@
+
+<div class="home_heading"> 
+  <h1>Welcome to the Schools Cool project!</h1>
+  <p>Below are a list of all the exciting subjects you can study</p>
+</div>
+
+
+<div id="wrapper">
+    <% @subjects.each do |subject| %>
+      <div class="subject">
+        <div class="title"><p><%= subject.name %></p></div>
+          <div class="image-wrap"> 
+            <div class="image_url">
+                <%= image_tag subject.image_url, { :class => "subject_logo"} %>   
+            <div class="links">
+                <a href="/subjects/<%= subject.id %>"><%= subject.name%></a>
+                <%= link_to 'Resources', subject_resources_path(subject.id) %>
+            </div>
+          </div> 
+        </div>   
+      </div>
+    <% end %>
+</div>
+ 
+
+
+<div class="home_bottom">
+<%= link_to "Create Subject", new_subject_path %>
+</div>

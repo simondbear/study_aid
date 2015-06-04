@@ -1,0 +1,13 @@
+<h1>Subjects</h1>
+<p>Create a new subject and we'll post it on the home page!</p>
+
+<div>
+  <%= form_for @subject do |f| %>
+  <p><%= "Name" %></p>
+  <p><%= f.text_field :name %></p>
+  <p><%= "Image URL" %></p>
+  <p><%= f.text_field :image_url%></p>
+  <p><%= f.submit "Create" %></P>
+<% end %>
+</div>
+

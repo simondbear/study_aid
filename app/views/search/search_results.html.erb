@@ -1,0 +1,20 @@
+<h1>Search Results</h1>
+<p>Find me in app/views/search/search_results.html.erb</p>
+
+<% @results.each do |subject| %>
+  <a href="/subjects/<%= subject.id %>"><%= subject.name %></a>
+<% end %>
+
+
+
+<div><%#= @search_results.each do |subjects| %>
+     <%#= link_to(subject.tile, subject)%>
+
+     <%#= @search_searc.each do |resources| %>
+     <%#= link_to(recources.tile, resources)%>
+
+     <%#= @search_results.each do |subjects| %>
+     <%#= link_to(resources.tile, resources)%>
+
+  </div>
+
